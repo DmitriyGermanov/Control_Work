@@ -9,6 +9,6 @@ public class Exit extends Command {
     }
     @Override
     public void execute() {
-        getConsoleUI().setWork(false);
+        getConsoleUI().setWork();
     }
 }

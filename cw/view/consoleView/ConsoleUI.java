@@ -44,11 +44,11 @@ public class ConsoleUI implements View {
         }
     }
 
-    public void setWork(boolean b) {
+    public void setWork() {
         this.work = false;
     }
 
-    public void writeData() {
+   public void writeData() {
         presenter.writeData(input.dataInput());
     }
 }
