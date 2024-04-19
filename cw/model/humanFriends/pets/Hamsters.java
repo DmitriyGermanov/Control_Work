@@ -1,6 +1,6 @@
-package humanFriends.pets;
+package model.humanFriends.pets;
 
-import humanFriends.Gender;
+import model.humanFriends.Gender;
 
 import java.time.LocalDate;
 

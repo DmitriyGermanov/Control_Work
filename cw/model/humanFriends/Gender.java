@@ -1,4 +1,4 @@
-package humanFriends;
+package model.humanFriends;
 
 public enum Gender {
     Male, Female
