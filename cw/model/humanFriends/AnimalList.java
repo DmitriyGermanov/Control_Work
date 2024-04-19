@@ -1,4 +1,4 @@
-package model;
+package model.humanFriends;
 
 import model.humanFriends.animals.Animal;
 
@@ -13,5 +13,12 @@ public class AnimalList<T extends Animal> {
     }
     public void addAnimal(T animal) {
         this.animals.add(animal);
+    }
+
+    @Override
+    public String toString() {
+        return "AnimalList{" +
+                "animals=" + animals +
+                '}';
     }
 }

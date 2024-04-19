@@ -1,5 +1,6 @@
 package view.consoleView.input.animalInput;
 
+import model.DataContainer;
 import view.consoleView.input.Input;
 
 

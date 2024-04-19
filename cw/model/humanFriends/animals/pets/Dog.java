@@ -17,10 +17,6 @@ public class Dog extends Pet {
         this.passportNumber = passportNumber;
     }
 
-    public Dog() {
-        super();
-    }
-
     public String getBreed() {
         return breed;
     }
