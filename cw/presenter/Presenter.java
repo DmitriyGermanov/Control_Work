@@ -3,7 +3,7 @@ package presenter;
 import model.Service;
 import view.View;
 import view.consoleView.ConsoleUI;
-import model.DataContainer;
+import view.consoleView.input.animalInput.DataContainer;
 
 public class Presenter {
     Service service;
@@ -12,6 +12,7 @@ public class Presenter {
 
     public Presenter(ConsoleUI view) {
         this.service = new Service();
+
         this.view = view;
         view.setPresenter(this);
     }
@@ -20,9 +21,7 @@ public class Presenter {
         view.start();
     }
 
-    public void writeData(String s) {
-    }
-    public void setAnimalName(String name) {
-        service.setAnimalName(name);
+    public boolean createAnimal(DataContainer data) {
+        return service.createAnimal(data);
     }
 }

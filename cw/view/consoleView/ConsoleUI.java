@@ -4,17 +4,24 @@ import presenter.Presenter;
 import view.View;
 import view.consoleView.input.ConsoleInput;
 import view.consoleView.input.Input;
+import view.consoleView.input.animalInput.AnimalInput;
+import view.consoleView.input.animalInput.DogInput;
+
+import java.util.ArrayList;
 
 public class ConsoleUI implements View {
     private boolean work;
     private final MainMenu menu;
     private final Input input;
     private Presenter presenter;
+    private ArrayList<AnimalInput> animalInputs;
 
     public ConsoleUI() {
         this.work = true;
         menu = new MainMenu(this);
         input = new ConsoleInput();
+        animalInputs = new ArrayList<>();
+        animalInputs.add(new DogInput(input));
     }
 
     public void setPresenter(Presenter presenter) {
@@ -48,7 +55,20 @@ public class ConsoleUI implements View {
         this.work = false;
     }
 
-   public void writeData() {
-        presenter.writeData(input.dataInput());
+    public void createAnimal() {
+        System.out.println("Выберите тип животного от 1 до " + animalInputs.size());
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < animalInputs.size(); i++) {
+            stringBuilder.append("\n");
+            stringBuilder.append(i + 1);
+            stringBuilder.append(". ");
+            stringBuilder.append(animalInputs.get(i).getType());
+        }
+        System.out.println(stringBuilder);
+        if(presenter.createAnimal(animalInputs.get(input.intInput() - 1).inputAnimal())) {
+            System.out.println("Животное успешно добавлено");
+            } else {
+            System.out.println("Ошибка! Животное не добавлено");
+        }
     }
 }

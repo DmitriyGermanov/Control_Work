@@ -1,6 +1,7 @@
 package view.consoleView;
 
 import view.commands.Command;
+import view.commands.CreateAnimal;
 import view.commands.Exit;
 
 import java.util.ArrayList;
@@ -11,6 +12,7 @@ public class MainMenu {
 
     public MainMenu(ConsoleUI consoleUI) {
         commandList = new ArrayList<>();
+        commandList.add(new CreateAnimal(consoleUI));
         commandList.add(new Exit(consoleUI));
     }
 

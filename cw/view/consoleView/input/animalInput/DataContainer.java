@@ -1,11 +1,10 @@
-package model;
-
-import model.humanFriends.animals.Gender;
+package view.consoleView.input.animalInput;
 
 import java.time.LocalDate;
 import java.util.List;
 
 public class DataContainer {
+    private String type; //base
     private String name; //base
     private LocalDate birthday; //base
     private double weight; //base
@@ -28,6 +27,39 @@ public class DataContainer {
     private boolean sterilized; //cat, dog
     private int passportNumber; //cat, dog
     public double length; //hamster
+
+    public DataContainer(String name, LocalDate birthday, double weight, Gender gender, String color,
+                         String temperament, List<String> commands, String owner, String activityLevel, String homeAddress,
+                         String size, String purpose, String livingEnvironment, String breed, double loadCapacity,
+                         String speed, String coatLength, boolean sterilized, int passportNumber, double length) {
+        this.name = name;
+        this.birthday = birthday;
+        this.weight = weight;
+        this.gender = gender;
+        this.color = color;
+        this.temperament = temperament;
+        this.commands = commands;
+        this.owner = owner;
+        this.activityLevel = activityLevel;
+        this.homeAddress = homeAddress;
+        this.size = size;
+        this.purpose = purpose;
+        this.livingEnvironment = livingEnvironment;
+        this.breed = breed;
+        this.loadCapacity = loadCapacity;
+        this.speed = speed;
+        this.coatLength = coatLength;
+        this.sterilized = sterilized;
+        this.passportNumber = passportNumber;
+        this.length = length;
+    }
+
+    public DataContainer() {
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -53,8 +85,8 @@ public class DataContainer {
         this.temperament = temperament;
     }
 
-    public void setCommands(String command) {
-        commands.add(command);
+    public void setCommands(List<String> commands) {
+        this.commands = commands;
     }
 
     public void setOwner(String owner) {
@@ -107,6 +139,10 @@ public class DataContainer {
 
     public void setLength(double length) {
         this.length = length;
+    }
+
+    public String getType() {
+        return type;
     }
 
     public String getName() {
