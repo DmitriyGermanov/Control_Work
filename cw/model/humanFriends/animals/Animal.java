@@ -94,4 +94,15 @@ public abstract class Animal {
     public List<String> getCommands() {
         return commands;
     }
+    public String getType() {
+        return type;
+    }
+
+    @Override
+    public String toString() {
+        return "ID животного: " + id + "\nИмя животного:" + name +"\n Дата рождения:" + birthday +
+                "\nТип животного:" + type;
+    }
+
+
 }

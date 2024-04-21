@@ -76,4 +76,8 @@ public class ConsoleUI implements View {
             System.out.println("Ошибка! Животное не добавлено");
         }
     }
+
+    public void showAllByBirthDate() {
+        System.out.println(presenter.showAllByBirthDate());
+    }
 }

@@ -3,6 +3,7 @@ package view.consoleView;
 import view.commands.Command;
 import view.commands.CreateAnimal;
 import view.commands.Exit;
+import view.commands.ShowAllByBirthDate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +14,7 @@ public class MainMenu {
     public MainMenu(ConsoleUI consoleUI) {
         commandList = new ArrayList<>();
         commandList.add(new CreateAnimal(consoleUI));
+        commandList.add(new ShowAllByBirthDate(consoleUI));
         commandList.add(new Exit(consoleUI));
     }
 

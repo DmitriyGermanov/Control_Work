@@ -18,4 +18,8 @@ public class Service {
     public boolean createAnimal(DataContainer dataContainer) {
         return animalList.add(animalFabric.createAnimal(dataContainer));
     }
+
+    public String showAllByBirthDate() {
+        return animalList.showAllByBirthDate();
+    }
 }

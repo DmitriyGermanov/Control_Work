@@ -31,4 +31,23 @@ public class AnimalList<T extends Animal> {
         }
         return true;
     }
+
+    public String showAllByBirthDate() {
+        List<T> sorted = animals;
+        sorted.sort((animal1, animal2) -> animal1.getBirthday().compareTo(animal2.getBirthday()));
+        StringBuilder sb = new StringBuilder();
+        if (animals.isEmpty()) {
+            return sb.append("Добавленные животные отсутствуют").toString();
+        } else {
+            boolean flag1;
+            sb.append("Все добавленные животные:\n");
+            sb.append(String.format("%-5s %-15s %-15s %-10s\n", "ID", "Имя животного", "Дата рождения", "Тип"));
+            for (Animal animal : sorted) {
+                sb.append("\n");
+                sb.append(String.format("%-5s %-15s %-15s %-10s\n", animal.getId(), animal.getName(),
+                        animal.getBirthday(), animal.getType()));
+            }
+        }
+        return sb.toString();
+    }
 }

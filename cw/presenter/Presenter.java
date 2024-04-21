@@ -24,4 +24,8 @@ public class Presenter {
     public boolean createAnimal(DataContainer data) {
         return service.createAnimal(data);
     }
+
+    public String showAllByBirthDate() {
+       return service.showAllByBirthDate();
+    }
 }
