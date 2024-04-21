@@ -14,7 +14,7 @@ public abstract class PetInput extends AnimalInput {
         container.setActivityLevel(input.dataInput());
         System.out.println("Введите домашний адрес животного:");
         container.setHomeAddress(input.dataInput());
-        System.out.println("Введите размер животного:");
+        System.out.println("Введите размер животного (строка):");
         container.setSize(input.dataInput());
         SpecificInput();
     }

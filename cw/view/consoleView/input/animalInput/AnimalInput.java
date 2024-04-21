@@ -24,7 +24,7 @@ public abstract class AnimalInput {
         container.setName(input.dataInput());
         System.out.println("Введите дату рождения животного в формате год-месяц-день: (1990-09-10):");
         container.setBirthday(input.dateInput());
-        System.out.println("Введите вес животного:");
+        System.out.println("Введите вес животного (число):");
         container.setWeight(input.doubleInput());
         System.out.println("Выберите пол животного");
         System.out.println("Выберите пол: 1. Самец, 2. Самка");

@@ -58,7 +58,7 @@ public class ConsoleInput implements Input {
         List<String> dataList = null;
         while (!flag) {
             try {
-                dataList = List.of(scanner.nextLine().split(", "));
+                dataList = List.of(scanner.nextLine().split(",\\s*"));
                 flag = true;
             } catch (Exception e) {
                 System.out.println("Пожалуйста, введите корректные данные");

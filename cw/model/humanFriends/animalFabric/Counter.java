@@ -2,12 +2,34 @@ package model.humanFriends.animalFabric;
 
 public class Counter {
     int counter;
+    int petCounter;
+    int packAnimalCounter;
 
     public Counter() {
         counter = 0;
+        petCounter = 0;
+        packAnimalCounter = 0;
     }
 
-    public int getCount() {
-        return ++counter;
+    public int getAndAddCount() {
+        return ++counter;}
+
+    public int getCounter() {
+        return counter;
+    }
+
+    public int getPetCount() {
+        return petCounter;
+    }
+
+    public void addPetCounter(){
+        petCounter++;
+    }
+    public void addPackAnimalCounter(){
+        packAnimalCounter++;
+    }
+
+    public int getPackAnimalCounter() {
+        return packAnimalCounter;
     }
 }

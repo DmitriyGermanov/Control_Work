@@ -4,8 +4,7 @@ import presenter.Presenter;
 import view.View;
 import view.consoleView.input.ConsoleInput;
 import view.consoleView.input.Input;
-import view.consoleView.input.animalInput.AnimalInput;
-import view.consoleView.input.animalInput.DogInput;
+import view.consoleView.input.animalInput.*;
 
 import java.util.ArrayList;
 
@@ -22,6 +21,12 @@ public class ConsoleUI implements View {
         input = new ConsoleInput();
         animalInputs = new ArrayList<>();
         animalInputs.add(new DogInput(input));
+        animalInputs.add(new CatInput(input));
+        animalInputs.add(new HamsterInput(input));
+        animalInputs.add(new HorseInput(input));
+        animalInputs.add(new CamelInput(input));
+        animalInputs.add(new DonkeyInput(input));
+
     }
 
     public void setPresenter(Presenter presenter) {
