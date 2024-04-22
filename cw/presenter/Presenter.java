@@ -36,4 +36,8 @@ public class Presenter {
     public boolean load(String file) {
         return service.load(file);
     }
+
+    public String showAnimalsCounter() {
+        return service.showAnimalsCounter();
+    }
 }

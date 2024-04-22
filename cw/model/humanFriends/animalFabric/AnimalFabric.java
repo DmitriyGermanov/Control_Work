@@ -1,6 +1,7 @@
 package model.humanFriends.animalFabric;
 
 
+import model.Counter;
 import model.humanFriends.animals.packAnimals.Camel;
 import model.humanFriends.animals.packAnimals.Donkey;
 import model.humanFriends.animals.packAnimals.Horse;
@@ -14,9 +15,8 @@ import model.humanFriends.animals.pets.Dog;
 public class AnimalFabric {
     Counter counter;
 
-    public AnimalFabric() {
-        counter = new Counter();
-
+    public AnimalFabric(Counter counter) {
+        this.counter = counter;
     }
 
     public Animal createAnimal(DataContainer dataContainer) {

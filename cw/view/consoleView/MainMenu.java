@@ -12,6 +12,7 @@ public class MainMenu {
         commandList = new ArrayList<>();
         commandList.add(new CreateAnimal(consoleUI));
         commandList.add(new ShowAllByBirthDate(consoleUI));
+        commandList.add(new ShowAnimalsCounter(consoleUI));
         commandList.add(new LoadFromFile(consoleUI));
         commandList.add(new Exit(consoleUI));
         commandList.add(new SaveAndExit(consoleUI));

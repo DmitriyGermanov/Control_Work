@@ -1,6 +1,8 @@
-package model.humanFriends.animalFabric;
+package model;
 
-public class Counter {
+import java.io.Serializable;
+
+public class Counter implements Serializable {
     int counter;
     int petCounter;
     int packAnimalCounter;

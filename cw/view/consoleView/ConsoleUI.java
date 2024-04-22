@@ -99,4 +99,8 @@ public class ConsoleUI implements View {
 
         }
     }
+
+    public void showAnimalsCounter() {
+        System.out.println(presenter.showAnimalsCounter());
+    }
 }

@@ -5,7 +5,7 @@ import view.consoleView.ConsoleUI;
 public class Exit extends Command {
 
     public Exit(ConsoleUI consoleUI) {
-        super("Выход", consoleUI);
+        super("Выйти без сохранения", consoleUI);
     }
     @Override
     public void execute() {
