@@ -2,10 +2,11 @@ package model.humanFriends;
 
 import model.humanFriends.animals.Animal;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AnimalList<T extends Animal> {
+public class AnimalList<T extends Animal> implements Serializable {
     private final List<T> animals;
 
     public AnimalList() {
@@ -41,11 +42,11 @@ public class AnimalList<T extends Animal> {
         } else {
             boolean flag1;
             sb.append("Все добавленные животные:\n");
-            sb.append(String.format("%-5s %-15s %-15s %-10s\n", "ID", "Имя животного", "Дата рождения", "Тип"));
+            sb.append(String.format("%-5s %-15s %-15s %-10s %-30s", "ID", "Имя животного", "Дата рождения",
+                    "Тип", "Команды"));
             for (Animal animal : sorted) {
-                sb.append("\n");
-                sb.append(String.format("%-5s %-15s %-15s %-10s\n", animal.getId(), animal.getName(),
-                        animal.getBirthday(), animal.getType()));
+                sb.append(String.format("\n%-5s %-15s %-15s %-10s %-30s", animal.getId(), animal.getName(),
+                        animal.getBirthday(), animal.getType(), animal.getCommands()));
             }
         }
         return sb.toString();

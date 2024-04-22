@@ -3,6 +3,7 @@ package model.humanFriends.animals.pets;
 import view.consoleView.input.animalInput.Gender;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Cat extends Pet {
     private String breed;
@@ -10,17 +11,16 @@ public class Cat extends Pet {
     private boolean sterilized;
     private int passportNumber;
 
-    public Cat(int id, String name, LocalDate birthday, double weight,
-               Gender gender, String color, String temperament, String owner, String activityLevel,
-               String homeAddress, String size, String breed, String coatLength,
-               boolean sterilized, int passportNumber) {
-        super(id, name, birthday, weight, gender, color, temperament, "Cat", owner, activityLevel, homeAddress, size);
+    public Cat(int id, String name, LocalDate birthday, double weight, Gender gender,
+               String color, String temperament, List<String> commands, String owner,
+               String activityLevel, String homeAddress, String size, String breed,
+               String coatLength, boolean sterilized, int passportNumber) {
+        super(id, name, birthday, weight, gender, color, temperament, "Кот", commands, owner, activityLevel, homeAddress, size);
         this.breed = breed;
         this.coatLength = coatLength;
         this.sterilized = sterilized;
         this.passportNumber = passportNumber;
     }
-
 
     public String getBreed() {
         return breed;

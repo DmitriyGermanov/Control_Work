@@ -2,11 +2,12 @@ package model.humanFriends.animals;
 
 import view.consoleView.input.animalInput.Gender;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Animal {
+public abstract class Animal implements Serializable {
     private final int id;
     private String name;
     private LocalDate birthday;
@@ -14,11 +15,11 @@ public abstract class Animal {
     private Gender gender;
     private String color;
     private String temperament;
-    private final List<String> commands;
+    private List<String> commands;
     private String type;
 
     public Animal(int id, String name, LocalDate birthday, double weight,
-                  Gender gender, String color, String temperament, String type) {
+                  Gender gender, String color, String temperament, String type, List<String> commands) {
         this.id = id;
         this.name = name;
         this.birthday = birthday;
@@ -26,8 +27,8 @@ public abstract class Animal {
         this.gender = gender;
         this.color = color;
         this.temperament = temperament;
+        this.commands = commands;
         this.type = type;
-        this.commands = new ArrayList<>();
     }
 
     public Animal(int id) {
@@ -91,16 +92,26 @@ public abstract class Animal {
         return temperament;
     }
 
-    public List<String> getCommands() {
-        return commands;
+    public String getCommands() {
+        if (commands.isEmpty()) {
+            return "Команды не заданы!";
+        } else {
+            StringBuilder sb = new StringBuilder();
+            for (String command : commands) {
+                sb.append(command).append(", ");
+            }
+            sb.setLength(sb.length() - 2);
+            return sb.toString();
+        }
     }
+
     public String getType() {
         return type;
     }
 
     @Override
     public String toString() {
-        return "ID животного: " + id + "\nИмя животного:" + name +"\n Дата рождения:" + birthday +
+        return "ID животного: " + id + "\nИмя животного:" + name + "\n Дата рождения:" + birthday +
                 "\nТип животного:" + type;
     }
 

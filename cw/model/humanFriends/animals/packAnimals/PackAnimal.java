@@ -4,16 +4,25 @@ import model.humanFriends.animals.Animal;
 import view.consoleView.input.animalInput.Gender;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public abstract class PackAnimal extends Animal {
     private String purpose;
     private String livingEnvironment;
     private String breed;
 
-    public PackAnimal(int id, String name, LocalDate birthday, double weight,
-                      Gender gender, String color, String temperament, String type,
+    public PackAnimal(int id, String name, LocalDate birthday,
+                      double weight, Gender gender, String color,
+                      String temperament, String type, List<String> commands,
                       String purpose, String livingEnvironment, String breed) {
-        super(id, name, birthday, weight, gender, color, temperament, type);
+        super(id, name, birthday, weight, gender, color, temperament, type, commands);
+        this.purpose = purpose;
+        this.livingEnvironment = livingEnvironment;
+        this.breed = breed;
+    }
+
+    public PackAnimal(int id, String purpose, String livingEnvironment, String breed) {
+        super(id);
         this.purpose = purpose;
         this.livingEnvironment = livingEnvironment;
         this.breed = breed;

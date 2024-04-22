@@ -28,4 +28,12 @@ public class Presenter {
     public String showAllByBirthDate() {
        return service.showAllByBirthDate();
     }
+
+    public boolean save(String filename) {
+        return service.save(filename);
+    }
+
+    public boolean load(String file) {
+        return service.load(file);
+    }
 }

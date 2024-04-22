@@ -4,6 +4,7 @@ import model.humanFriends.animals.Animal;
 import view.consoleView.input.animalInput.Gender;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public abstract class Pet extends Animal {
     private String owner;
@@ -12,9 +13,9 @@ public abstract class Pet extends Animal {
     private String size;
 
     public Pet(int id, String name, LocalDate birthday, double weight,
-               Gender gender, String color, String temperament, String type, String owner,
+               Gender gender, String color, String temperament,  String type, List<String> commands, String owner,
                String activityLevel, String homeAddress, String size) {
-        super(id, name, birthday, weight, gender, color, temperament, type);
+        super(id, name, birthday, weight, gender, color, temperament, type, commands);
         this.owner = owner;
         this.activityLevel = activityLevel;
         this.homeAddress = homeAddress;

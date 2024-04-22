@@ -3,15 +3,16 @@ package model.humanFriends.animals.packAnimals;
 import view.consoleView.input.animalInput.Gender;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Donkey extends PackAnimal {
     private String owner;
     private double loadCapacity;
 
     public Donkey(int id, String name, LocalDate birthday, double weight, Gender gender, String color,
-                  String temperament, String purpose, String livingEnvironment,
+                  String temperament,  List<String> commands, String purpose, String livingEnvironment,
                   String breed, String owner, double loadCapacity) {
-        super(id, name, birthday, weight, gender, color, temperament, "Donkey", purpose, livingEnvironment, breed);
+        super(id, name, birthday, weight, gender, color, temperament, "Осёл", commands, purpose, livingEnvironment, breed);
         this.owner = owner;
         this.loadCapacity = loadCapacity;
     }

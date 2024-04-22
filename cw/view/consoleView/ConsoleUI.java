@@ -70,14 +70,33 @@ public class ConsoleUI implements View {
             stringBuilder.append(animalInputs.get(i).getType());
         }
         System.out.println(stringBuilder);
-        if(presenter.createAnimal(animalInputs.get(input.intInput() - 1).inputAnimal())) {
+        if (presenter.createAnimal(animalInputs.get(input.intInput() - 1).inputAnimal())) {
             System.out.println("Животное успешно добавлено");
-            } else {
+        } else {
             System.out.println("Ошибка! Животное не добавлено");
         }
     }
 
     public void showAllByBirthDate() {
         System.out.println(presenter.showAllByBirthDate());
+    }
+
+    public void saveAndExit() {
+        if (presenter.save("data.txt")) {
+            System.out.println("Данные успешно сохранены");
+            setWork();
+        } else {
+            System.out.println("Ошибка! Данные не сохранены, попробуйте выйти без сохранения изменений");
+        }
+
+    }
+
+    public void loadFromFile() {
+        if (presenter.load("data.txt")) {
+            System.out.println("Данные успешно загружены");
+        } else {
+            System.out.println("Ошибка! Данные не загружены");
+
+        }
     }
 }

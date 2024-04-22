@@ -63,7 +63,6 @@ public class ConsoleInput implements Input {
             } catch (Exception e) {
                 System.out.println("Пожалуйста, введите корректные данные");
             }
-
         }
         return dataList;
     }

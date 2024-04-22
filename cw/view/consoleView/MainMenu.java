@@ -1,9 +1,6 @@
 package view.consoleView;
 
-import view.commands.Command;
-import view.commands.CreateAnimal;
-import view.commands.Exit;
-import view.commands.ShowAllByBirthDate;
+import view.commands.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +12,9 @@ public class MainMenu {
         commandList = new ArrayList<>();
         commandList.add(new CreateAnimal(consoleUI));
         commandList.add(new ShowAllByBirthDate(consoleUI));
+        commandList.add(new LoadFromFile(consoleUI));
         commandList.add(new Exit(consoleUI));
+        commandList.add(new SaveAndExit(consoleUI));
     }
 
     public String menu() {

@@ -3,6 +3,7 @@ package model.humanFriends.animals.packAnimals;
 import view.consoleView.input.animalInput.Gender;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Horse extends PackAnimal {
     private String speed;
@@ -10,9 +11,9 @@ public class Horse extends PackAnimal {
     private String owner;
 
     public Horse(int id, String name, LocalDate birthday, double weight, Gender gender, String color,
-                 String temperament, String purpose, String livingEnvironment,
-                 String breed, String speed, String size, String owner) {
-        super(id, name, birthday, weight, gender, color, temperament, "Horse", purpose, livingEnvironment, breed);
+                 String temperament, List<String> commands, String purpose,
+                 String livingEnvironment, String breed, String speed, String size, String owner) {
+        super(id, name, birthday, weight, gender, color, temperament, "Лошадь", commands, purpose, livingEnvironment, breed);
         this.speed = speed;
         this.size = size;
         this.owner = owner;
