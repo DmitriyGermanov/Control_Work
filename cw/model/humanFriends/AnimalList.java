@@ -4,6 +4,7 @@ import model.humanFriends.animals.Animal;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class AnimalList<T extends Animal> implements Serializable {
@@ -50,5 +51,17 @@ public class AnimalList<T extends Animal> implements Serializable {
             }
         }
         return sb.toString();
+    }
+
+    public T searchById(Integer id) {
+        List<T> sorted = animals;
+        sorted.sort((animal1, animal2) -> animal1.getId() - animal2.getId());
+        int finalId = Collections.binarySearch(sorted, new Animal(id),
+                (animal1, animal2) -> animal1.getId() - animal2.getId());
+        if (finalId >= 0) {
+            return animals.get(finalId);
+        } else {
+            return null;
+        }
     }
 }

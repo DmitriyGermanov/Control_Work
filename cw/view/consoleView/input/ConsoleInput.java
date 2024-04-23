@@ -1,12 +1,10 @@
 package view.consoleView.input;
 
 import view.consoleView.input.animalInput.AnimalInput;
-import view.consoleView.input.animalInput.DogInput;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 

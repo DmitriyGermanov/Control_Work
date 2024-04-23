@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Animal implements Serializable {
+public class Animal implements Serializable {
     private final int id;
     private String name;
     private LocalDate birthday;
@@ -63,6 +63,23 @@ public abstract class Animal implements Serializable {
     public void setCommand(String command) {
         this.commands.add(command);
     }
+
+    public boolean setCommands(List<String> commands) {
+        List<String> list = new ArrayList<>();
+        if (this.commands.isEmpty() && !commands.isEmpty() && !commands.getFirst().isEmpty()) {
+            this.commands = commands;
+            return true;
+        } else if (!commands.isEmpty() && !commands.getFirst().isEmpty()) {
+            list.addAll(this.commands);
+            list.addAll(commands);
+            this.commands = list;
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
 
     public int getId() {
         return id;

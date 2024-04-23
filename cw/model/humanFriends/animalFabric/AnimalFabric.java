@@ -21,43 +21,43 @@ public class AnimalFabric {
 
     public Animal createAnimal(DataContainer dataContainer) {
         if (dataContainer.getType().equals("Собака")) {
-            counter.addPetCounter();
-            return new Dog(counter.getAndAddCount(), dataContainer.getName(), dataContainer.getBirthday(),
+            this.counter.addPetCounter();
+            return new Dog(this.counter.getAndAddCount(), dataContainer.getName(), dataContainer.getBirthday(),
                     dataContainer.getWeight(), dataContainer.getGender(), dataContainer.getColor(),
                     dataContainer.getTemperament(), dataContainer.getCommands(), dataContainer.getOwner(),
                     dataContainer.getActivityLevel(),
                     dataContainer.getHomeAddress(), dataContainer.getSize(), dataContainer.getBreed(),
                     dataContainer.isSterilized(), dataContainer.getPassportNumber());
         } else if (dataContainer.getType().equals("Кот")) {
-            counter.addPetCounter();
-            return new Cat(counter.getAndAddCount(), dataContainer.getName(), dataContainer.getBirthday(),
+            this.counter.addPetCounter();
+            return new Cat(this.counter.getAndAddCount(), dataContainer.getName(), dataContainer.getBirthday(),
                     dataContainer.getWeight(), dataContainer.getGender(), dataContainer.getColor(),
                     dataContainer.getTemperament(), dataContainer.getCommands(), dataContainer.getOwner(), dataContainer.getActivityLevel(),
                     dataContainer.getHomeAddress(), dataContainer.getSize(),
                     dataContainer.getBreed(), dataContainer.getCoatLength(),
                     dataContainer.isSterilized(), dataContainer.getPassportNumber());
         } else if (dataContainer.getType().equals("Хомяк")) {
-            counter.addPetCounter();
-            return new Hamster(counter.getAndAddCount(), dataContainer.getName(), dataContainer.getBirthday(),
+            this.counter.addPetCounter();
+            return new Hamster(this.counter.getAndAddCount(), dataContainer.getName(), dataContainer.getBirthday(),
                     dataContainer.getWeight(), dataContainer.getGender(), dataContainer.getColor(),
                     dataContainer.getTemperament(), dataContainer.getCommands(), dataContainer.getOwner(), dataContainer.getActivityLevel(),
                     dataContainer.getHomeAddress(), dataContainer.getSize(), dataContainer.getLength());
         } else if (dataContainer.getType().equals("Верблюд")) {
-            counter.addPackAnimalCounter();
-            return new Camel(counter.getAndAddCount(), dataContainer.getName(), dataContainer.getBirthday(),
+            this.counter.addPackAnimalCounter();
+            return new Camel(this.counter.getAndAddCount(), dataContainer.getName(), dataContainer.getBirthday(),
                     dataContainer.getWeight(), dataContainer.getGender(), dataContainer.getColor(),
                     dataContainer.getTemperament(), dataContainer.getCommands(), dataContainer.getPurpose(), dataContainer.getLivingEnvironment(),
                     dataContainer.getBreed(), dataContainer.getSize(), dataContainer.getLoadCapacity());
         } else if (dataContainer.getType().equals("Осёл")) {
-            counter.addPackAnimalCounter();
-            return new Donkey(counter.getAndAddCount(), dataContainer.getName(), dataContainer.getBirthday(),
+            this.counter.addPackAnimalCounter();
+            return new Donkey(this.counter.getAndAddCount(), dataContainer.getName(), dataContainer.getBirthday(),
                     dataContainer.getWeight(), dataContainer.getGender(), dataContainer.getColor(),
                     dataContainer.getTemperament(), dataContainer.getCommands(), dataContainer.getPurpose(), dataContainer.getLivingEnvironment(),
                     dataContainer.getBreed(), dataContainer.getOwner(), dataContainer.getLoadCapacity());
         }
         else if (dataContainer.getType().equals("Лошадь")) {
-            counter.addPackAnimalCounter();
-            return new Horse(counter.getAndAddCount(), dataContainer.getName(), dataContainer.getBirthday(),
+            this.counter.addPackAnimalCounter();
+            return new Horse(this.counter.getAndAddCount(), dataContainer.getName(), dataContainer.getBirthday(),
                     dataContainer.getWeight(), dataContainer.getGender(), dataContainer.getColor(),
                     dataContainer.getTemperament(), dataContainer.getCommands(), dataContainer.getPurpose(), dataContainer.getLivingEnvironment(),
                     dataContainer.getBreed(), dataContainer.getSpeed(),

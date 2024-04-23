@@ -103,4 +103,15 @@ public class ConsoleUI implements View {
     public void showAnimalsCounter() {
         System.out.println(presenter.showAnimalsCounter());
     }
+
+    public void addCommandById() {
+        System.out.println("Введите ID животного");
+        int id = input.intInput();
+        System.out.println("Введите команды для добавления через запятую:");
+        if (presenter.addCommandById(id, input.dataInputList())) {
+            System.out.println("Команды успешно добавлены");
+        } else {
+            System.out.println("Ошибка! Команды не добавлены");
+        }
+    }
 }

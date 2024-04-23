@@ -5,6 +5,8 @@ import view.View;
 import view.consoleView.ConsoleUI;
 import view.consoleView.input.animalInput.DataContainer;
 
+import java.util.List;
+
 public class Presenter {
     Service service;
     View view;
@@ -39,5 +41,9 @@ public class Presenter {
 
     public String showAnimalsCounter() {
         return service.showAnimalsCounter();
+    }
+
+    public boolean addCommandById(Integer id, List<String> commands) {
+        return service.addCommandById(id, commands);
     }
 }

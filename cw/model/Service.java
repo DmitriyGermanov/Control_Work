@@ -7,6 +7,8 @@ import model.writer.FileHandler;
 import model.writer.Writable;
 import view.consoleView.input.animalInput.DataContainer;
 
+import java.util.List;
+
 
 public class Service {
     private AnimalList<Animal> animalList;
@@ -54,7 +56,16 @@ public class Service {
         StringBuilder builder = new StringBuilder();
         builder.append("Всего животных: ").append(counter.getCounter()).append("\n");
         builder.append("Питомцы: ").append(counter.getPetCount()).append("\n");
-        builder.append("Вьючные животные: ").append(counter.getPackAnimalCounter()).append("\n");
+        builder.append("Вьючные животные: ").append(counter.getPackAnimalCounter());
         return builder.toString();
+    }
+
+    public boolean addCommandById(Integer id, List<String> command) {
+        Animal animal = animalList.searchById(id);
+        if (animal != null && animal.setCommands(command)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
