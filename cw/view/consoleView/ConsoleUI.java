@@ -2,9 +2,9 @@ package view.consoleView;
 
 import presenter.Presenter;
 import view.View;
-import view.consoleView.input.ConsoleInput;
-import view.consoleView.input.Input;
-import view.consoleView.input.animalInput.*;
+import view.input.ConsoleInput;
+import view.input.Input;
+import view.input.animalInput.*;
 
 import java.util.ArrayList;
 

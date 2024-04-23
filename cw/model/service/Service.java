@@ -1,11 +1,11 @@
-package model;
+package model.service;
 
 import model.humanFriends.AnimalList;
 import model.humanFriends.animalFabric.AnimalFabric;
 import model.humanFriends.animals.Animal;
 import model.writer.FileHandler;
 import model.writer.Writable;
-import view.consoleView.input.animalInput.DataContainer;
+import view.input.animalInput.DataContainer;
 
 import java.util.List;
 

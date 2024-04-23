@@ -1,6 +1,6 @@
-package view.consoleView.input.animalInput;
+package view.input.animalInput;
 
-import view.consoleView.input.Input;
+import view.input.Input;
 
 public abstract class AnimalInput {
     private final String type;

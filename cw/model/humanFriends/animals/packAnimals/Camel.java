@@ -1,6 +1,6 @@
 package model.humanFriends.animals.packAnimals;
 
-import view.consoleView.input.animalInput.Gender;
+import view.input.animalInput.Gender;
 
 import java.time.LocalDate;
 import java.util.List;

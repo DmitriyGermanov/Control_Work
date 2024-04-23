@@ -1,4 +1,4 @@
-package view.consoleView.input.animalInput;
+package view.input.animalInput;
 
 import java.time.LocalDate;
 import java.util.List;

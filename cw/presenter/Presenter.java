@@ -1,9 +1,9 @@
 package presenter;
 
-import model.Service;
+import model.service.Service;
 import view.View;
 import view.consoleView.ConsoleUI;
-import view.consoleView.input.animalInput.DataContainer;
+import view.input.animalInput.DataContainer;
 
 import java.util.List;
 

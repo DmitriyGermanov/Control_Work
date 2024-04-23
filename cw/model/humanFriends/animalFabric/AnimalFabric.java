@@ -1,12 +1,12 @@
 package model.humanFriends.animalFabric;
 
 
-import model.Counter;
+import model.service.Counter;
 import model.humanFriends.animals.packAnimals.Camel;
 import model.humanFriends.animals.packAnimals.Donkey;
 import model.humanFriends.animals.packAnimals.Horse;
 import model.humanFriends.animals.pets.Hamster;
-import view.consoleView.input.animalInput.DataContainer;
+import view.input.animalInput.DataContainer;
 import model.humanFriends.animals.Animal;
 import model.humanFriends.animals.pets.Cat;
 import model.humanFriends.animals.pets.Dog;

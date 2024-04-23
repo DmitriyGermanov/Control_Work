@@ -1,6 +1,6 @@
-package view.consoleView.input;
+package view.input;
 
-import view.consoleView.input.animalInput.AnimalInput;
+import view.input.animalInput.AnimalInput;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
